@@ -1,4 +1,11 @@
 spring:
+  datasource:
+    url: jdbc:firebirdsql://192.168.2.11:3050//work/cmn/db/trtovs/trtovswes.fdb?sql_dialect=3
+    username: SYSDBA
+    password: masterkey
+    driver-class-name: org.firebirdsql.jdbc.FBDriver
+  jpa:
+    show-sql: true
   thymeleaf:
     cache : false
 
