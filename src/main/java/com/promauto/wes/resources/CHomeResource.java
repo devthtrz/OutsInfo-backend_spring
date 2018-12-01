@@ -1,14 +1,15 @@
 package com.promauto.wes.resources;
 
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by Belyaev Alexei (lebllex) on 29.11.18.
  */
-@Controller
-@RequestMapping("/home")
+@RestController
+@RequestMapping("/")
 public class CHomeResource {
     @GetMapping
     public String emitHelloHome(){

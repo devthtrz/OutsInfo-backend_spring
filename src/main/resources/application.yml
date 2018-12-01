@@ -1,16 +1,17 @@
 spring:
   datasource:
-    url: jdbc:firebirdsql://192.168.2.11:3050//work/cmn/db/trtovs/trtovswes.fdb?sql_dialect=3
+#    url: jdbc:firebirdsql://192.168.2.11:3050//work/cmn/db/trtovs/trtovswes.fdb?sql_dialect=3
+    url: jdbc:firebirdsql://localhost:3050//wrkdt/db/firebd/trtovswes.fdb?sql_dialect=3
     username: SYSDBA
-    password: masterkey
+    password: masterskey
     driver-class-name: org.firebirdsql.jdbc.FBDriver
   jpa:
     show-sql: true
-  thymeleaf:
-    cache : false
-
-
-welcome:
-  message: "Hello Thymeleaf"
-error:
-    message: "Module name and descr required"
+#  thymeleaf:
+#    cache : false
+#
+#
+#welcome:
+#  message: "Hello Thymeleaf"
+#error:
+#    message: "Module name and descr required"
