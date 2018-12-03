@@ -2,6 +2,7 @@ package com.promauto.wes.services;
 
 import com.promauto.wes.exceptions.CMainNotFoundException;
 import com.promauto.wes.models.CMain;
+import com.promauto.wes.models.CModule;
 import com.promauto.wes.repository.CMainRepository;
 import com.promauto.wes.requests.CMainRequest;
 import org.springframework.stereotype.Service;
@@ -14,27 +15,29 @@ import java.util.Optional;
 @Transactional(readOnly = true)
 public class CMainService {
     private final CMainRepository mainRepository;
+    private final CModuleService  moduleRepository;
 
-    public CMainService(CMainRepository repository){
-        this.mainRepository = repository;
+
+    public CMainService(CMainRepository repository, CModuleService moduleRepository){
+        this.mainRepository         = repository;
+        this.moduleRepository    = moduleRepository;
     }
 
     @Transactional
-    public CMain update(CMain module){
-        return this.mainRepository.save(module);
+    public CMain update(CMain mmain){
+        return this.mainRepository.save(mmain);
     }
 
     @Transactional
     public CMain create(CMainRequest request){
-        CMain module = new CMain();
-        module.setName(request.getName());
-        return this.mainRepository.save(module);
+        CMain mmain = new CMain();
+        return  mmain; // what did you want, main creates and updates by independent server
     }
 
     @Transactional
     public void delete(String id){
-        final Optional<CMain> module = this.mainRepository.findById(id);
-        module.ifPresent(this.mainRepository::delete);
+        final Optional<CMain> mmain = this.mainRepository.findById(id);
+        mmain.ifPresent(this.mainRepository::delete);
     }
 
     public List<CMain> findAll(){
@@ -42,26 +45,28 @@ public class CMainService {
     }
 
     public List<CMain> findByName(String name){
-        return this.mainRepository.findByName(name);
+//        CModule module = this.moduleRepository.findByName(name).get(0); // get id next we can use it
+//        return this.mainRepository.findByName(module.getIdm());
+        return null;
     }
     public List<CMain> findByNameStartingWith(String name){
-        return this.mainRepository.findByNameIgnoreCaseStartingWith(name);
+        return null;
     }
 
     public CMain findOne(String name) throws CMainNotFoundException {
-
-        final CMain [] arr=new CMain[1];
-        arr[0]=null;
-        findAll().stream().forEach(x -> {if(name.compareTo(x.getName()) == 0){
-            arr[0]=x;
-        }});
-
-
-        if(arr[0] != null){
-            return arr[0];
-        }else{
-            throw new CMainNotFoundException(name);
-        }
+        throw new CMainNotFoundException(name);
+//        final CMain [] arr=new CMain[1];
+//        arr[0]=null;
+//        findAll().stream().forEach(x -> {if(name.compareTo(x.getName()) == 0){
+//            arr[0]=x;
+//        }});
+//
+//
+//        if(arr[0] != null){
+//            return arr[0];
+//        }else{
+//            throw new CMainNotFoundException(name);
+//        }
     }
 
 }
