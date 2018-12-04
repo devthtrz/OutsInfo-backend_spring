@@ -8,6 +8,7 @@ import com.promauto.wes.requests.CMainRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,16 +46,15 @@ public class CMainService {
     }
 
     public List<CMain> findByName(String name){
-//        CModule module = this.moduleRepository.findByName(name).get(0); // get id next we can use it
-//        return this.mainRepository.findByName(module.getIdm());
-        return null;
+        return Arrays.asList(this.mainRepository.findByModuleName(name));
     }
+
     public List<CMain> findByNameStartingWith(String name){
         return null;
     }
 
     public CMain findOne(String name) throws CMainNotFoundException {
-        throw new CMainNotFoundException(name);
+        return this.mainRepository.findByModuleName(name);
 //        final CMain [] arr=new CMain[1];
 //        arr[0]=null;
 //        findAll().stream().forEach(x -> {if(name.compareTo(x.getName()) == 0){
