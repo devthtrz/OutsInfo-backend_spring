@@ -1,9 +1,16 @@
 spring:
   datasource:
+<<<<<<< HEAD
     url: jdbc:firebirdsql://192.168.2.11:3050//work/cmn/db/trtovs/trtovswes.fdb?sql_dialect=3
 #    url: jdbc:firebirdsql://localhost:3050//wrkdt/db/firebd/trtovswes.fdb?sql_dialect=3
     username: SYSDBA
 #    password: masterskey
+=======
+#    url: jdbc:firebirdsql://192.168.2.11:3050//work/cmn/db/trtovs/trtovswes.fdb?sql_dialect=3
+#    url: jdbc:firebirdsql://localhost:3050//wrkdt/db/firebd/trtovswes.fdb?sql_dialect=3
+    url: jdbc:firebirdsql://localhost:3050//home/alexey/workspace/db/uvfs/uvfswes.fdb?sql_dialect=3
+    username: SYSDBA
+>>>>>>> 36ba128d972f283cb97cbee3cb1df7137b531abb
     password: masterkey
     driver-class-name: org.firebirdsql.jdbc.FBDriver
   jpa:

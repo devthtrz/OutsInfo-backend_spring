@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Service
 @Transactional(readOnly = true)
-public class CModuleService { 
+public class CModuleService {
     private final CModuleRepository moduleRepository;
 
         public CModuleService(CModuleRepository moduleRepository) {
