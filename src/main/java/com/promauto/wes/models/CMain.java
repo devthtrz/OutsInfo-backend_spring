@@ -10,16 +10,16 @@ import java.util.Date;
 
 @Data
 @Entity
-@NamedQuery(name = "CMain.findByModuleName", query = "SELECT  idm, \n" +
-        "    pertype\n" +
-        "    FROM CMain p WHERE idm = (select idm from CModule where name = ?1)")
+//@NamedQuery(name = "CMain.findByModuleName", query = "SELECT  idm, \n" +
+//        "    pertype, wes \n" +
+//        "    FROM CMain p WHERE idm = (select idm from CModule where name = ?1)")
 @Table(name = "main")
 public class CMain {
     @Id
     int idm;
     int pertype;
 //    Date    dtbeg;
-//    int wes;
+    int wes;
 //    int swbeg;
 //    int swend;
 //    int wnum;

@@ -25,7 +25,6 @@ public class CModule {
     int     arcoutsize;
     int     arcoutper;
     int     arcouttime;
-
     int     wmul;
 //    int     protocolversion;
     // and so on and so on
