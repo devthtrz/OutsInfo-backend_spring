@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Data
@@ -18,9 +19,9 @@ public class CMain {
     @Id
     int idm;
     int pertype;
-//    Date    dtbeg;
-    int wes;
-//    int swbeg;
-//    int swend;
-//    int wnum;
+    Timestamp dtbeg;
+    long wes;
+    long swbeg;
+    long swend;
+    long wnum;
 }

@@ -26,8 +26,8 @@ public class CMainService {
     }
 
     @Transactional
-    public CMain update(CMain mmain){
-        return this.mainRepository.save(mmain);
+    public CMain update(CMain main){
+        return this.mainRepository.save(main);
     }
 
     @Transactional
@@ -46,12 +46,12 @@ public class CMainService {
         return this.mainRepository.findAll();
     }
 
-    public List<CMain> findByName(String name){
+    public CMain findByName(String name){
         return findByNameStartingWith(name);
     }
 
-    public List<CMain> findByNameStartingWith(String name){
-        return null;
+    public CMain findByNameStartingWith(String name){
+        return this.mainRepository.findByModuleName(name);
     }
 
     public CMain findOne(String name) throws CMainNotFoundException, CModuleNotFoundException {

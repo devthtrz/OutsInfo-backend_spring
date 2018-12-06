@@ -14,11 +14,11 @@ spring:
     sql-script-encoding: UTF-8
   jpa:
     show-sql: true
-#  thymeleaf:
-#    cache : false
+  thymeleaf:
+    cache : false
 #
 #
-#welcome:
-#  message: "Hello Thymeleaf"
-#error:
-#    message: "Module name and descr required"
+    welcome:
+      message: "Hello Thymeleaf"
+    error:
+      message: "Module name and descr required"

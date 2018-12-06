@@ -25,7 +25,6 @@ public class CModulesResource {
         this.moduleService = service;
     }
 
-
     @GetMapping(value = "/{name}")
     @ApiOperation(value = "Find module",notes = "Find the module by Name")
     @ApiResponses(value = {

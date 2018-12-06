@@ -34,7 +34,7 @@ public class CMainResources {
             @ApiResponse(code = 404,message = "Main not found"),
     })
     public ResponseEntity<CMain> findOne(@PathVariable("name") String name) throws CMainNotFoundException, CModuleNotFoundException {
-        return ResponseEntity.ok(this.mainService.findOne(name));
+        return ResponseEntity.ok(this.mainService.findByName(name));
     }
 
 
