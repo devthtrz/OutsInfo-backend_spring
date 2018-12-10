@@ -1,4 +1,4 @@
-package com.promauto.wes.resources;
+package com.promauto.wes.controllers;
 
 import com.promauto.wes.exceptions.CMainNotFoundException;
 import com.promauto.wes.exceptions.CModuleNotFoundException;
@@ -19,10 +19,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/main")
 @Api(tags = "Main", description = "Main API")
-public class CMainResources {
+public class CMainController {
     private final CMainService mainService;
 
-    public CMainResources(CMainService service) {
+    public CMainController(CMainService service) {
         this.mainService = service;
     }
 

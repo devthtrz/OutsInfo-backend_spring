@@ -1,4 +1,4 @@
-package com.promauto.wes.resources;
+package com.promauto.wes.controllers;
 
 import com.promauto.wes.exceptions.CProductNotFoundException;
 import com.promauto.wes.models.CProduct;
@@ -18,10 +18,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/products")
 @Api(tags = "Products", description = "Products API")
-public class CProductResource {
+public class CProductController {
     private final CProductService productService;
 
-    public CProductResource(CProductService service) {
+    public CProductController(CProductService service) {
         this.productService = service;
     }
 
@@ -32,8 +32,8 @@ public class CProductResource {
             @ApiResponse(code = 200,message = "Products found"),
             @ApiResponse(code = 404,message = "Products not found"),
     })
-    public ResponseEntity<CProduct> findOne(@PathVariable("name") String name) throws CProductNotFoundException {
-        return ResponseEntity.ok(this.productService.findOne(name));
+    public ResponseEntity<CProduct> findByName(@PathVariable("name") String name) throws CProductNotFoundException {
+        return ResponseEntity.ok(this.productService.findByName(name));
     }
 
 

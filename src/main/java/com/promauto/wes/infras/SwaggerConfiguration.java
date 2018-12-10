@@ -1,4 +1,4 @@
-package com.promauto.wes.infra;
+package com.promauto.wes.infras;
 
 
 import org.springframework.context.annotation.Bean;
