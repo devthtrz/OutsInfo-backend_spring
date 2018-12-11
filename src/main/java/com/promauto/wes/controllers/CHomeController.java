@@ -20,10 +20,10 @@ import java.util.Collections;
 public class CHomeController {
     @GetMapping
     public ThymeleafView emitHelloHome(){
-        log.info("emitting view");
+        log.info("emitting view","homecontroller");
         ThymeleafView view = new ThymeleafView("templates/maintemplate");
-        log.info("view created");
-        view.setStaticVariables(Collections.singletonMap("planets", Arrays.asList("neptun","pluton")));
+        log.info("view created","homecontroller");
+//        view.setStaticVariables(Collections.singletonMap("planets", Arrays.asList("neptun","pluton")));
         return view;
     }
 }
