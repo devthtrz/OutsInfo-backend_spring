@@ -1,6 +1,5 @@
-package com.promauto.wes.resources;
+package com.promauto.wes.controllers;
 
-import com.promauto.wes.exceptions.CModuleNotFoundException;
 import com.promauto.wes.models.CModule;
 import com.promauto.wes.services.CModuleService;
 import io.swagger.annotations.Api;
@@ -18,10 +17,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/modules")
 @Api(tags = "Modules", description = "Modules API")
-public class CModulesResource {
+public class CModulesController {
     private final CModuleService moduleService;
 
-    public CModulesResource(CModuleService service) {
+    public CModulesController(CModuleService service) {
         this.moduleService = service;
     }
 
@@ -31,8 +30,8 @@ public class CModulesResource {
             @ApiResponse(code = 200,message = "Modules found"),
             @ApiResponse(code = 404,message = "Modules not found"),
     })
-    public ResponseEntity<CModule> findOne(@PathVariable("name") String name) throws CModuleNotFoundException {
-        return ResponseEntity.ok(this.moduleService.findOne(name));
+    public ResponseEntity<CModule> findByName(@PathVariable("name") String name){
+        return ResponseEntity.ok(this.moduleService.findByName(name));
     }
 
 

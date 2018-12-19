@@ -1,6 +1,5 @@
 package com.promauto.wes.services.reports;
 
-import com.promauto.wes.repository.CMainRepository;
 import com.promauto.wes.services.CMainService;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;

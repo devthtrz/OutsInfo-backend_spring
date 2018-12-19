@@ -1,4 +1,4 @@
-package com.promauto.wes.repository;
+package com.promauto.wes.repositories;
 
 import com.promauto.wes.models.CModule;
 import org.springframework.data.jpa.repository.JpaRepository;

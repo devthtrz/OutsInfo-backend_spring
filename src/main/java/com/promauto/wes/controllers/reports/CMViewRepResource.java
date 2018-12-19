@@ -1,4 +1,4 @@
-package com.promauto.wes.resources.reports;
+package com.promauto.wes.controllers.reports;
 
 
 import com.promauto.wes.services.reports.JasperReportService;

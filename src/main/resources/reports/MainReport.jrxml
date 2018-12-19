@@ -13,9 +13,7 @@
 		</conditionalStyle>
 	</style>
 	<parameter name="tittle" class="java.lang.String" evaluationTime="Late"/>
-	<parameter name="pageTittle" class="java.lang.String" evaluationTime="Late">
-		<defaultValueExpression><![CDATA[Отчет]]></defaultValueExpression>
-	</parameter>
+	<parameter name="pageTittle" class="java.lang.String" evaluationTime="Late"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>

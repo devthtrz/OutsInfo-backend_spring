@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:hello="http://hello">
+
+<head>
+    <title>Main Table</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<ul>
+    <li th:each="planet : ${planets}" hello:saytoplanet="${planet}">Hi Planet X!</li>
+</ul>
+
+</body>
+</html>
