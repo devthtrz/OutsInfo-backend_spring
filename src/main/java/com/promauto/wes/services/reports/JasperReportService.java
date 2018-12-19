@@ -6,6 +6,7 @@ import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -14,6 +15,7 @@ import java.util.Map;
 /**
  * Created by Belyaev Alexei (lebllex) on 07.12.18.
  */
+@Service
 public class JasperReportService {
     private final CMainService  mainService;
 
